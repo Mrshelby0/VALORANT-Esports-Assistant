@@ -1,21 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VALORANT Esports Assistant</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('back.png') no-repeat center center fixed;
+            background-size: fill;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            backdrop-filter: blur(5px);
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .chat-box {
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+
+        #chat-log div {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 10px;
+            background: rgba(75, 85, 99, 0.7);
+        }
+
+        #chat-log div:nth-child(odd) {
+            background-color: rgba(255, 87, 34, 0.6);
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white">
+
+<body class="flex items-center justify-center h-screen">
     <div class="container mx-auto p-6">
-        <h1 class="text-4xl font-bold mb-4">VALORANT Esports Assistant</h1>
-        <div class="chat-box bg-gray-800 p-4 rounded-lg shadow-lg">
-            <div id="chat-log" class="mb-4 h-64 overflow-y-auto"></div>
-            <input id="user-input" type="text" class="w-full p-2 rounded-md bg-gray-700 text-white" placeholder="Ask about VALORANT players or teams...">
-            <button id="send-btn" class="mt-2 p-2 bg-teal-500 rounded-md w-full text-white hover:bg-teal-600">Send</button>
+        <h1 class="text-5xl text-center text-red-500 font-bold mb-6 text-teal-300">VALORANT Esports Assistant</h1>
+        <div class="chat-box bg-gray-800 p-6 rounded-lg shadow-xl max-w-2xl mx-auto">
+            <div id="chat-log" class="h-96 overflow-y-auto text-white"></div>
+            <div class="mt-4">
+                <input id="user-input" type="text" class="w-full p-4 rounded-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-teal-500" placeholder="Ask about VALORANT players or teams...">
+                <button id="send-btn" class="mt-4 p-4 w-full bg-teal-500 rounded-md text-white hover:bg-teal-600 transition-all">Send</button>
+            </div>
         </div>
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
