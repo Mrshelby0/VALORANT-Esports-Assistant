@@ -21,8 +21,8 @@ Before running the project, ensure you have the following installed:
 
 ### 1. Clone the Repository
 
-```bash
-git clone https://github.com/your-username/valorant-esports-assistant.git
+```bash[
+git clone https://github.com/your-username/valorant-esports-assistant.git](https://github.com/Mrshelby0/VALORANT-Esports-Assistant)
 cd valorant-esports-assistant
 ```
 
