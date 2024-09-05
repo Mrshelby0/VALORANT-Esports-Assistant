@@ -1,0 +1,4 @@
+mkdir valiant-assistant
+cd valiant-assistant
+npm init -y
+npm install aws-sdk

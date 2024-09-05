@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT Esports Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto p-6">
+        <h1 class="text-4xl font-bold mb-4">VALORANT Esports Assistant</h1>
+        <div class="chat-box bg-gray-800 p-4 rounded-lg shadow-lg">
+            <div id="chat-log" class="mb-4 h-64 overflow-y-auto"></div>
+            <input id="user-input" type="text" class="w-full p-2 rounded-md bg-gray-700 text-white" placeholder="Ask about VALORANT players or teams...">
+            <button id="send-btn" class="mt-2 p-2 bg-teal-500 rounded-md w-full text-white hover:bg-teal-600">Send</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
